@@ -6,10 +6,7 @@ const router = express.Router()
 
 router.post('/signup', signup)
 router.post('/login', login)
-router.get('/verify', verify)
-router.get('/test', isAuthenticated, (req, res, next) => {
+router.get('/verify', isAuthenticated, verify)
 
-  res.send('-------------------->')
-})
 
 export default router

@@ -20,7 +20,7 @@ const signup = async (req: Request, res: Response, next: NextFunction) => {
     res.status(201).json({ message: 'User created' });
 
   } catch (error) {
-    console.log(error)
+    next(error)
   }
 
 }
@@ -40,7 +40,7 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
       res.status(401).json({ error: 'Email or Password Incorrect' });
     }
   } catch (error) {
-    console.log(error)
+    next(error)
   }
 }
 
