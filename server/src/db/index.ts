@@ -5,7 +5,7 @@ export const pool = new Pool({
   password: "admin",
   host: "localhost",
   port: 5432,
-  database: "testDB"
+  database: "admin"
 })
 
 async function connectDataBase() {
@@ -13,7 +13,7 @@ async function connectDataBase() {
     host: 'localhost',
     user: 'admin',
     password: 'admin',
-    database: 'testDB',
+    database: 'admin',
     port: 5432,
   });
 

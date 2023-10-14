@@ -10,7 +10,6 @@ const signup = async (req: Request, res: Response, next: NextFunction) => {
   const saltRounds = 10;
   const salt = bcrypt.genSaltSync(saltRounds)
   const hash1 = bcrypt.hashSync(password, salt)
-  // const verifyPass1 = bcrypt.compareSync('popino', hash1);
 
   try {
     const query = 'INSERT INTO USERS(name, email, password) VALUES($1, $2, $3)'
@@ -30,6 +29,11 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const query = 'SELECT * FROM users WHERE email = $1';
     const userResult = await pool.query(query, [email]);
+
+    if (userResult.rows.length === 0) {
+      res.status(401).json({ error: 'Email or Password Incorrect' });
+    }
+
     const user = userResult.rows[0];
     const verifyPass = await bcrypt.compare(password, user.password);
 
