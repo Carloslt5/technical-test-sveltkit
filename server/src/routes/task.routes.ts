@@ -1,9 +1,9 @@
 import express from 'express'
-import { payments } from '../controllers/payments.controllers'
+import { getTask } from '../controllers/task.controllers'
 import { isAuthenticated } from '../middleware/verifyToken.middlware'
 
 const router = express.Router()
 
-router.get('/', isAuthenticated, payments)
+router.get('/', isAuthenticated, getTask)
 
 export default router
