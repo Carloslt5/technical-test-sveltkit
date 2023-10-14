@@ -1,5 +1,6 @@
 <script>
-	import { navigate } from 'svelte-routing';
+	import { goto } from '$app/navigation';
+
 	let email = '';
 	let password = '';
 
@@ -16,9 +17,13 @@
 					'Content-Type': 'application/json'
 				}
 			});
+			if (response.status != 200) {
+				alert('Email or Password error!');
+				return;
+			}
 			const result = await response.json();
 			localStorage.setItem('token', result.token);
-			navigate('/payments');
+			goto('/payments');
 		} catch (error) {
 			console.log(error);
 		}
