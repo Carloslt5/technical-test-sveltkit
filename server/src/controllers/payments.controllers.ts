@@ -16,7 +16,7 @@ const payments = async (req: Request, res: Response, next: NextFunction) => {
     OFFSET $2`
 
     const result = await pool.query(query, [queryLimit, querySkip]);
-
+    console.log(result.rows)
     res.status(200).json(result.rows);
   } catch (error) {
     next(error)
