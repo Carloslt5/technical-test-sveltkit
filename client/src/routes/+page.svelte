@@ -1,16 +1,24 @@
 <script>
-	import { Router, Link, Route } from 'svelte-routing';
 	import Home from './Home.svelte';
-	import Login from './Login.svelte';
+	import Login from './login/+page.svelte';
+	import PaymentsPage from './payments/+page.svelte';
 </script>
 
-<Router>
-	<nav>
-		<Link to="/">Home</Link>
-		<Link to="/login">Login</Link>
-	</nav>
-	<div>
-		<Route path="/"><Home /></Route>
-		<Route path="/login"><Login /></Route>
-	</div>
-</Router>
+<svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap"
+		rel="stylesheet"
+	/>
+</svelte:head>
+
+<nav>
+	<a href="/">Home</a>
+	<a href="/login">Login</a>
+	<a href="/payments">Payment</a>
+</nav>
+
+<style>
+	@import './global.css';
+</style>
