@@ -1,0 +1,32 @@
+CREATE TABLE USERS (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE CLIENTS (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    status BIT NOT NULL,
+    lastlogin TIMESTAMP
+);
+
+CREATE TABLE PAYMENTS (
+    id SERIAL PRIMARY KEY,
+    amount DECIMAL(10, 2) NOT NULL,
+    paid_status BOOLEAN NOT NULL,
+    paid_date DATE,
+    client_id INT REFERENCES CLIENTS(id)
+);
+
+CREATE TABLE TASK (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    start_time TIMESTAMP NOT NULL,
+    end_time TIMESTAMP NOT NULL,
+    color VARCHAR(50),
+    user_id INT REFERENCES USERS(id)
+);
