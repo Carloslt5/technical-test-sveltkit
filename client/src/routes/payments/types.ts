@@ -1,4 +1,3 @@
-export const lang = 'ts'
 export interface PaymentData {
   amount: string;
   client_id: number;
@@ -9,4 +8,6 @@ export interface PaymentData {
   paid_date: string;
   paid_status: boolean;
   status: boolean;
+  checked?: boolean;
 }
+
