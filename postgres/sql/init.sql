@@ -57,10 +57,6 @@ INSERT INTO CLIENTS (name, email, status, lastlogin) VALUES
     ('Liam White', 'liam.white@example.com', FALSE, '2023-10-13 09:25:00'),
     ('Grace Brown', 'grace.brown@example.com', TRUE, '2023-10-14 07:40:00');
 
-
-
-
--- Additional payments for clients with staggered dates
 INSERT INTO PAYMENTS (amount, paid_status, paid_date, client_id) VALUES
     (90.00, TRUE, '2023-10-20', 1),
     (60.75, TRUE, '2023-10-25', 2),
