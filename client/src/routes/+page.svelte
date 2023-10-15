@@ -1,4 +1,8 @@
-<script>
+<script lang="ts">
+	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	goto('/login');
+
+	onMount(() => {
+		goto('/login');
+	});
 </script>

@@ -1,8 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html,
 body,
 div,
@@ -139,8 +134,13 @@ table {
   --color-base-600: #353945;
   --color-base-800: #141416;
   --color-primary-800: #1F41F4;
-  --color-secondary-890: #24B24C;
+  --color-secondary-900: #24B24C;
   --color-white-100: #FFFFFF;
+  --color-bg-parent: #F2F0F9;
+  --color-bg-stripe: #F4F2FF;
+  --color-positive: #007F00;
+  --color-negative: #8f1111;
+  --fonts-primary-variant: #6E6893;
 }
 
 body {

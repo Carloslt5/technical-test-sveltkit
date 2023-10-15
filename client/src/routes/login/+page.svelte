@@ -32,7 +32,10 @@
 
 <main class="main_form">
 	<div class="form">
-		<figure class="form_logo">LOGO</figure>
+		<figure class="form_logo">
+			<div class="logo_circle">t</div>
+			<div class="logo_testing">testing</div>
+		</figure>
 
 		<header class="form_header">
 			<h5 class="form_header_h5">Welcome</h5>
@@ -119,9 +122,32 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 3em 1em;
+		padding: 1em;
 	}
-
+	.form_logo {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		align-items: center;
+		color: var(--color-base-800, #141416);
+		font-family: 'Oleo Script Swash Caps';
+	}
+	.logo_circle {
+		border-radius: 15.775px 15.775px 15.775px 3.606px;
+		background: var(--color-secondary-900);
+		padding: 0.3em;
+		width: 1em;
+		height: 1em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.875em;
+		color: var(--color-white-100);
+	}
+	.logo_testing {
+		font-size: 1.875em;
+	}
 	.form {
 		display: flex;
 		height: 100%;
@@ -132,7 +158,6 @@
 		gap: 3em;
 		border-radius: 1em;
 		color: var(--color-base-800);
-		border: 1px solid black;
 	}
 	.form_header {
 		display: flex;
@@ -191,6 +216,9 @@
 		flex-direction: column;
 		gap: 0.5em;
 		width: 100%;
+	}
+	.form_label {
+		font-size: 0.75em;
 	}
 	input {
 		border: none;
