@@ -2,6 +2,14 @@ version: '3.8'
 
 services:
 
+  server:
+    build: ./server
+    depends_on:
+      - postgres
+    ports:
+      - "5005:5005"
+    restart: always
+
   postgres:
     build:
       context: ./postgres

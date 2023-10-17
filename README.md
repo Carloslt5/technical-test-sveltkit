@@ -1,7 +1,7 @@
 
 ## Instructions
 
-### Step 1 - Init DDBB 
+### Step 1 - Init DDBB and Init SERVER
 
 `./frontend-carlos-liao/` 
 
@@ -9,22 +9,12 @@
 docker-compose up
   ```
 
-
-### Step 2 - Init server
-
-`./frontend-carlos-liao/server` 
-
-  ```bash
-npm run dev
-  ```
-
-
-
-### Step 3 - Init client 
+### Step 2 - Init client 
 
 `./frontend-carlos-liao/client` 
 
   ```bash
+npm install
 npm run dev
   ```
 
