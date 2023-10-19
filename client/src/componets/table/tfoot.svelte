@@ -5,9 +5,15 @@
 	export let currentPage: number
 	export let totalPayments: number
 	export let rowPerPage: number
-	export let handeFechData: (rowPerPage: number) => void
+	export let handleFechData: () => void
 	export let handlePrevPage: () => void
 	export let handleNextPage: () => void
+	export let setRowsPerPage: (n:number) => void
+
+  const rowValue = () => {
+    setRowsPerPage(rowPerPage)
+    handleFechData()
+  }
 </script>
 
 <tfoot class="payments_list_footer">
@@ -17,7 +23,7 @@
 			<select
 				bind:value={rowPerPage}
 				class="custom-select"
-				on:change={() => handeFechData(rowPerPage)}
+				on:change={rowValue}
 			>
 				<option value={6}>Rows per page 6</option>
 				<option value={10}>Rows per page 10</option>

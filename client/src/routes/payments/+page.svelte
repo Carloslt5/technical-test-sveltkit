@@ -14,15 +14,19 @@
 	let currentPage = 0
 
 	onMount(async () => {
-		handeFechData(rowPerPage)
+		handleFechData()
 	})
 
-	const handeFechData = async (rowPerPage: number) => {
-		if (currentPage > totalPayments / rowPerPage) {
-			currentPage = 0
+  const setRowsPerPage = (n:number) =>{
+    rowPerPage = n
+  }
+
+	const handleFechData = async () => {
+    if (currentPage > totalPayments / rowPerPage) {
+      currentPage = 0
 		}
 		const data = await fetchData(currentPage, rowPerPage)
-		if (data) {
+    if (data) {
 			[payments, totalPayments] = data
 		}
 	}
@@ -38,13 +42,13 @@
 	}
 
 	const handlePrevPage = async () => {
-		currentPage = await prevPage(currentPage)
-		await handeFechData(rowPerPage)
+		currentPage = prevPage(currentPage)
+		await handleFechData()
 	}
 
 	const handleNextPage = async () => {
-		currentPage = await nextPage(currentPage, totalPayments, rowPerPage)
-		await handeFechData(rowPerPage)
+		currentPage =  nextPage(currentPage, totalPayments, rowPerPage)
+		await handleFechData()
 	}
 </script>
 
@@ -61,7 +65,8 @@
 					{currentPage}
 					{totalPayments}
 					{rowPerPage}
-					{handeFechData}
+          {setRowsPerPage}
+					{handleFechData}
 					{handlePrevPage}
 					{handleNextPage}
 				/>
