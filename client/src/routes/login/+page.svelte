@@ -67,7 +67,7 @@
 		font-family: 'Oleo Script Swash Caps';
 	}
 	.logo_circle {
-		border-radius: 15.775px 15.775px 15.775px 3.606px;
+		border-radius: 0.9em 0.9em 0.9em 0.2em;
 		background: var(--color-secondary-900);
 		padding: 0.3em;
 		width: 1em;

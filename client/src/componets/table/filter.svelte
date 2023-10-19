@@ -25,9 +25,8 @@
 		align-items: stretch;
 		gap: 0.5em;
 		border-radius: 0.375em;
-
 		background-color: var(--color-bg-stripe);
-		width: 392px;
+		max-width: 400px;
 	}
 	.payments_icon {
 		display: flex;

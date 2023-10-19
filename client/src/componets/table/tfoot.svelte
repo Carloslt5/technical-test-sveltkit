@@ -48,6 +48,7 @@
 		flex-direction: row;
 		justify-content: end;
 		align-items: center;
+    flex-wrap: nowrap;
 		background-color: var(--color-bg-stripe);
 		padding: 1em;
 		color: var(--fonts-primary-variant);

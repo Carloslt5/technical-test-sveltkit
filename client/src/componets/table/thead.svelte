@@ -19,6 +19,10 @@
 </thead>
 
 <style>
+  .payments_list_header {
+    width: 100%;
+    min-width: 800px;
+  }
 	.payments_list_header > tr {
 		display: grid;
 		grid-template-columns: 0.2fr 2fr 2fr 1fr 0.5fr 0.5fr;

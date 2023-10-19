@@ -59,8 +59,10 @@
 		</section>
 		<section class="payments_list">
 			<table class="payments_list_content">
-				<THead {mainCheck} {handleMainCheck} />
-				<TBody {payments} {handleCheck} />
+        <div class="scroll-content">
+          <THead {mainCheck} {handleMainCheck} />
+          <TBody {payments} {handleCheck} />
+        </div>
 				<TFoot
 					{currentPage}
 					{totalPayments}
@@ -78,25 +80,40 @@
 <style>
 	#bg_payments {
 		background-color: var(--color-bg-parent);
-		min-height: 100vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+    min-height: 100vh;
 	}
 	.payments_table {
 		background-color: var(--color-white-100);
 		width: 90%;
 		max-width: 90em;
 		border-radius: 0.375em;
+    margin: 1em;
 		filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
 	}
+  .scroll-content{
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
 	.payments_filter {
 		padding: 1em;
 	}
+  .payments_list{
+    height: 100%;
+  }
 	.payments_list_content {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 		font-size: 0.75em;
 	}
 </style>

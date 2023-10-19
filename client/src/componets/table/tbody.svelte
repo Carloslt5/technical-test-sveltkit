@@ -56,6 +56,12 @@
 </tbody>
 
 <style>
+
+  .payments_list_body{
+    max-height: 90vh;
+    width: 100%;
+    min-width: 800px;
+   }
 	.payments_list_body_td {
 		display: flex;
 		flex-direction: column;
