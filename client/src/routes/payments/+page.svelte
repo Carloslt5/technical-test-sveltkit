@@ -4,7 +4,7 @@
 	import THead from './../../componets/table/thead.svelte'
 	import TBody from './../../componets/table/tbody.svelte'
 	import TFoot from './../../componets/table/tfoot.svelte'
-	import { toggleCheck, fetchData, prevPage, nextPage , toggleMainCheck} from './utils'
+	import { toggleCheck, fetchData, prevPage, nextPage , toggleMainCheck} from './functions'
 	import type { PaymentData } from './types'
 
 	let payments: PaymentData[] = []

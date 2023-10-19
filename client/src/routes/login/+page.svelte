@@ -1,35 +1,14 @@
-<script>
-	import { goto } from '$app/navigation'
+<script lang="ts">
 	import ImgEmail from './../../assets/ImgEmail.svelte'
 	import ImgPass from './../../assets/ImgPassword.svelte'
 	import { loginText } from './../../const/const'
+  import {onSubmit} from './functions'
 
-	let email = ''
-	let password = ''
+	let email:string
+	let password:string
 
-	async function handleOnSubmit() {
-		try {
-			const userData = {
-				email,
-				password
-			}
-			const response = await fetch('http://localhost:5005/api/auth/login', {
-				method: 'POST',
-				body: JSON.stringify(userData),
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			})
-			if (response.status != 200) {
-				alert('Email or Password error!')
-				return
-			}
-			const result = await response.json()
-			localStorage.setItem('token', result.token)
-			goto('/payments')
-		} catch (error) {
-			console.log(error)
-		}
+	const handleOnSubmit = () =>{
+    onSubmit(email,password)
 	}
 </script>
 
