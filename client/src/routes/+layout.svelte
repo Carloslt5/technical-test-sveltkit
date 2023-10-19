@@ -10,9 +10,7 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
-
+<script>
+  import './global.css'
+</script>
 <slot />
-
-<style>
-	@import './global.css';
-</style>

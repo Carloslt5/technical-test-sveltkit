@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Payments</title>
+</svelte:head>
+
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import Filter from './../../componets/table/filter.svelte'
