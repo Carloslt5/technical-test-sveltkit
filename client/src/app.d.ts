@@ -1,4 +1,3 @@
-
 declare global {
   namespace App {
     // interface Error {}
@@ -7,5 +6,4 @@ declare global {
     // interface Platform {}
   }
 }
-
-export { };
+export { }

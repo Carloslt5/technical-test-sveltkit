@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { headerTexts } from './../../const/const';
-	export let mainCheck: boolean;
-	export let handleMainCheck: () => void;
+	import { headerTexts } from './../../const/const'
+	export let mainCheck: boolean
+	export let handleMainCheck: () => void
 </script>
 
 <thead class="payments_list_header">

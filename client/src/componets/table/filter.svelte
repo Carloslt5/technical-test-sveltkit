@@ -1,5 +1,5 @@
 <script>
-	let filter = '';
+	let filter = ''
 </script>
 
 <form id="payments_form">

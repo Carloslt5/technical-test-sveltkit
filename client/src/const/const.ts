@@ -10,4 +10,4 @@ export const loginText = {
   password: 'Password',
   login: 'Log in now',
   signup: 'Sign up'
-};
+}

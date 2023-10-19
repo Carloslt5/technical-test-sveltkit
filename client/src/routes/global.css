@@ -130,17 +130,17 @@ table {
 }
 
 :root {
-  --color-base-300: #E6E8EC;
+  --color-base-300: #e6e8ec;
   --color-base-600: #353945;
   --color-base-800: #141416;
-  --color-primary-800: #1F41F4;
-  --color-secondary-900: #24B24C;
-  --color-white-100: #FFFFFF;
-  --color-bg-parent: #F2F0F9;
-  --color-bg-stripe: #F4F2FF;
-  --color-positive: #007F00;
+  --color-bg-parent: #f2f0f9;
+  --color-bg-stripe: #f4f2ff;
   --color-negative: #8f1111;
-  --fonts-primary-variant: #6E6893;
+  --color-positive: #007f00;
+  --color-primary-800: #1f41f4;
+  --color-secondary-900: #24b24c;
+  --color-white-100: #ffffff;
+  --fonts-primary-variant: #6e6893;
 }
 
 body {
