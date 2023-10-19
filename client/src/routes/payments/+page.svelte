@@ -63,7 +63,7 @@
 		</section>
 		<section class="payments_list">
 			<table class="payments_list_content">
-        <div class="scroll-content">
+        <div class="payments_list_content--scroll-content">
           <THead {mainCheck} {handleMainCheck} />
           <TBody {payments} {handleCheck} />
         </div>
@@ -100,12 +100,6 @@
     flex-direction: column;
     justify-content: stretch;
 	}
-  .scroll-content{
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-  }
 	.payments_filter {
 		padding: 1em;
 	}
@@ -120,4 +114,10 @@
     justify-content: space-between;
 		font-size: 0.75em;
 	}
+  .payments_list_content--scroll-content{
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
 </style>

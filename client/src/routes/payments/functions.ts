@@ -49,9 +49,7 @@ export const toggleMainCheck = (mainCheck: boolean, payments: PaymentData[]) => 
   for (const payment of payments) {
     payment.checked = mainCheck
   }
-  payments = [...payments]
   return { mainCheck, payments }
-
 }
 
 export const prevPage = (currentPage: number): number => {
