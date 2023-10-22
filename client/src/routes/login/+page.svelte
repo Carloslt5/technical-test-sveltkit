@@ -3,7 +3,7 @@
 </svelte:head>
 
 <script>
-  import LoginForm from './../../componets/loginForm.svelte'
+  import LoginForm from '$lib/components/loginForm.svelte'
 </script>
 
 <main class="main_form">

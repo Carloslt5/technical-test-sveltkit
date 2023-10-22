@@ -1,44 +1,42 @@
 <script lang="ts">
-	import ImgEmail from '../assets/ImgEmail.svelte'
-	import ImgPassword from '../assets/ImgPassword.svelte'
-	import { loginText } from '../const/const'
-	import { onSubmit } from '../routes/login/functions'
+	import ImgEmail from '$lib/icons/ImgEmail.svelte'
+	import ImgPassword from '$lib/icons/ImgPassword.svelte'
+  import { loginText } from '$lib/const/const'
+  import { onSubmit } from './../../routes/login/functions'
 
-
-	let email:string
-	let password:string
-
-	const handleOnSubmit = () =>{
-    onSubmit(email,password)
+	let email: string
+	let password: string
+	const handleOnSubmit = () => {
+		onSubmit(email, password)
 	}
 </script>
 
 <form on:submit|preventDefault={handleOnSubmit} class="form_body">
-  <div class="form_body_group">
-    <div class="form_group--up">
-      <div class="form_group--text">
-        <label for="email" class="form_label">{loginText.email}</label>
-        <input bind:value={email} type="email" placeholder="Account@email.com" required />
-      </div>
-      <ImgEmail />
-    </div>
-    <div class="form_group--down">
-      <div class="form_group--text">
-        <label for="password" class="form_label">{loginText.password}</label>
-        <input bind:value={password} type="password" placeholder="Password" required />
-      </div>
-      <ImgPassword />
-    </div>
-  </div>
+	<div class="form_body_group">
+		<div class="form_group--up">
+			<div class="form_group--text">
+				<label for="email" class="form_label">{loginText.email}</label>
+				<input bind:value={email} type="email" placeholder="Account@email.com" required />
+			</div>
+			<ImgEmail />
+		</div>
+		<div class="form_group--down">
+			<div class="form_group--text">
+				<label for="password" class="form_label">{loginText.password}</label>
+				<input bind:value={password} type="password" placeholder="Password" required />
+			</div>
+			<ImgPassword />
+		</div>
+	</div>
 
-  <div class="form_buttons">
-    <button type="submit" class="form_buttons--submit">{loginText.login}</button>
-    <button class="form_buttons--signup">{loginText.signup}</button>
-  </div>
+	<div class="form_buttons">
+		<button type="submit" class="form_buttons--submit">{loginText.login}</button>
+		<button class="form_buttons--signup">{loginText.signup}</button>
+	</div>
 </form>
 
 <style>
-  .form_body {
+	.form_body {
 		display: flex;
 		flex-direction: column;
 		gap: 3em;

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import LeftArrow from '../../assets/leftArrow.svelte'
-	import RightArrow from '../../assets/rightArrow.svelte'
+	import LeftArrow from '$lib/icons/leftArrow.svelte'
+	import RightArrow from '$lib/icons/rightArrow.svelte'
 
 	export let currentPage: number
 	export let totalPayments: number

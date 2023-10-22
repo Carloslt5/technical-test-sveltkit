@@ -4,10 +4,10 @@
 
 <script lang="ts">
 	import { onMount } from 'svelte'
-	import Filter from './../../componets/table/filter.svelte'
-	import THead from './../../componets/table/thead.svelte'
-	import TBody from './../../componets/table/tbody.svelte'
-	import TFoot from './../../componets/table/tfoot.svelte'
+	import Filter from '$lib/components/table/filter.svelte'
+	import THead from '$lib/components/table/thead.svelte'
+	import TBody from '$lib/components/table/tbody.svelte'
+	import TFoot from '$lib/components/table/tfoot.svelte'
 	import { toggleCheck, fetchData, prevPage, nextPage , toggleMainCheck} from './functions'
 	import type { PaymentData } from './types'
 
